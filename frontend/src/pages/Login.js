@@ -1,6 +1,7 @@
-import React from 'react'
-import {Layout, Menu,  Row, Col, Form, Input, Button, Typography, Divider,message } from 'antd'
-import { loginFn, profile } from '../services/auth'
+import React from 'react';
+import { Layout, Menu, Row, Col, Form, Input, Button, Typography, Divider, message } from 'antd';
+import styles from './Login.module.css'; // Import CSS Module
+import { loginFn, profile } from '../services/auth';
 import { useContextInfo } from '../hooks/context'
 import { Link } from 'react-router-dom'
 import { logoutFn } from '../services/auth'

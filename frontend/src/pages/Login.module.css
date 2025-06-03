@@ -1,0 +1,25 @@
+/* Styles for LoginPage */
+/* Add any page-specific styles here in the future */
+
+/* Example: If there was a specific container for the login form */
+/*
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; // Example to take up most of the viewport height
+  padding: 20px;
+}
+*/
+
+/* Example: If the form itself needed specific styling not covered by Ant Design overrides */
+/*
+.form {
+  width: 100%;
+  max-width: 400px; // Example max width
+  padding: 20px;
+  background: #ffffff; // Example background
+  border-radius: 8px; // Example border radius
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Example shadow
+}
+*/

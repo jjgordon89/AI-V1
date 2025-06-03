@@ -47,10 +47,14 @@ import Completed from './pages/DashboardMenu/StatusProgress/Completed';
 import InProgress from './pages/DashboardMenu/StatusProgress/InProgress';
 import AllMyPaths from './pages/DashboardMenu/AllMyPaths';
 
+// Import new payment status pages
+import SuccessPage from './pages/payment/SuccessPage';
+import FailurePage from './pages/payment/FailurePage';
+import PendingPage from './pages/payment/PendingPage';
 
-const Success = () => <h1>Success Payment</h1>
-const Failure = () => <h1>Failure Payment</h1>
-const Pending = () => <h1>Pending Payment</h1>
+// const Success = () => <h1>Success Payment</h1> // Removed
+// const Failure = () => <h1>Failure Payment</h1> // Removed
+// const Pending = () => <h1>Pending Payment</h1> // Removed
 
 const Router = () => {
   return (
@@ -108,9 +112,9 @@ const Router = () => {
       <Route path='/donate300' component={Donate300} exact />
       <Route path='/donate400' component={Donate400} exact />
       <Route path='/progreso' component={Progreso} exact />
-      <Route exact path="/success" component={Success} />
-      <Route exact path="/failure" component={Failure} />
-      <Route exact path="/pending" component={Pending} />
+      <Route exact path="/success" component={SuccessPage} /> {/* Updated */}
+      <Route exact path="/failure" component={FailurePage} /> {/* Updated */}
+      <Route exact path="/pending" component={PendingPage} /> {/* Updated */}
       <Route component={NotFound} />
       
     </Switch>

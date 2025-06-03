@@ -1,19 +1,23 @@
 import React from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
+import styles from './Home.module.css'; // Import CSS Module
+
 const { TextArea } = Input;
 
 const AppContact = () => {
+    // Assuming 'block', 'container-fluid', 'titleHolder', and 'login-form' (and its button) are global or antd specific
     return (
-        <div className="block contactBlock" style={{marginTop:'70px'}}>
-        <div className="container-fluid">
+        <div className={`block ${styles.contactBlock}`} style={{marginTop:'70px'}}> {/* Applied styles.contactBlock */}
+          <div className="container-fluid">
             <div className="titleHolder">
-                <h2>Get In Touch</h2>
-                <p>We would love to hear from you. Tell us what's on your mind. </p>
+              <h2>Get In Touch</h2>
+              <p>We would love to hear from you. Tell us what's on your mind. </p>
             </div>
+            {/* The styling for .ant-form and textarea within contactBlock will be applied via styles.contactBlock from the CSS module */}
             <Form
-        name="normal_login"
-        className="login-form"
-        initialValues={{ remember: true }}
+              name="normal_login"
+              className="login-form" // This class is kept, might be for global styling or antd's own purposes
+              initialValues={{ remember: true }}
         >
         <Form.Item
             name="fullname"

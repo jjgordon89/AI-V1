@@ -171,169 +171,11 @@ p {
   opacity: 1;
 }
 /* 
-  hero
-  ---- 
-  */
-.heroBlock {
-  background: url("https://media.giphy.com/media/i4jKn7itdV2Tvjzj6Y/giphy.gif") no-repeat;
-  background-position: 50% 100%;
-  background-size: cover;
-  height: 100vh;
-  margin-left: 0;
-}
-.heroBlock .container-fluid {
-  display: block !important;
-
-
-}
-.heroBlock .ant-carousel,
-.heroBlock .ant-carousel div {
-  height: 100%;
-}
-.heroBlock .slick-dots li button {
-  background: #000 !important;
-}
-.heroBlock .slick-dots li.slick-active button {
-  background: #1890ff !important;
-}
-.heroBlock .content {
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 0 0 0px 70px;
-}
-.heroBlock h3 {
-  font-size: 30px;
-  line-height: 1.2;
-  margin: 0 0 30px;
-}
-.heroBlock p {
-  margin: 0 0 30px;
-}
-.heroBlock .btnHolder {
-  height: auto !important;
-}
-.heroBlock .btnHolder button,
-.heroBlock .btnHolder .fas {
-  margin: 0 10px 0 0;
-}
-/* 
   block
   ----- 
   */
 .block {
   border-bottom: 1px solid #d9d9d9;
-}
-/* 
-  about
-  ----- 
-  */
-.aboutBlock .contentHolder {
-  text-align: center;
-  margin: 0 0 50px;
-}
-.aboutBlock .icon {
-  font-size: 40px;
-  color: #1890ff;
-  margin: 0 0 10px;
-}
-.aboutBlock .content {
-  text-align: center;
-}
-/* 
-  how it works
-  ------------
-  */
-.worksBlock {
-  background: url("https://media.giphy.com/media/3o752oeUYz6S2SHi5W/giphy.gif")
-    no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #fff;
-  position: relative;
-}
-.worksBlock:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.worksBlock h2 {
-  color: #fff;
-}
-.worksBlock .contentHolder {
-  text-align: center;
-}
-.worksBlock .contentHolder button {
-  font-weight: 50;
-  font-size: 20px;
-  line-height: 1;
-  background: none;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 30px;
-  border-radius: 50%;
-  width: 110px;
-  height: 110px;
-}
-/* 
-  faqs
-  ----
-  */
-.faqBlock .ant-collapse {
-  margin: 0 0 40px;
-}
-.faqBlock .quickSupport {
-  text-align: center;
-  max-width: 740px;
-  margin: auto;
-}
-.faqBlock .fas {
-  margin: 0 10px 0 0;
-}
-/* 
-  pricing block
-  -------------
-  */
-.pricingBlock .ant-list {
-  text-align: center;
-}
-.pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
-  box-shadow: 0 0 12px 2px #f3f3f3;
-  transform: scale(1.1);
-  position: relative;
-  z-index: 1;
-}
-.pricingBlock .ant-card-head-title {
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 400;
-}
-.pricingBlock .large {
-  font-size: 38px;
-  line-height: 1;
-  margin: 0 0 20px;
-}
-.pricingBlock .fab {
-  margin: 0 10px 0 0;
-}
-/* 
-  contact
-  -------
-  */
-.contactBlock .ant-form {
-  max-width: 640px;
-  margin: auto;
-}
-.contactBlock .ant-form textarea {
-  min-height: 120px;
-  height: 120px;
 }
 /* 
   footer
@@ -389,14 +231,9 @@ p {
   ----------
   */
 @media only screen and (max-width: 991px) {
-  .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
-    transform: scale(1.14);
-  }
+
 }
 @media only screen and (max-width: 767px) {
-  .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
-    transform: scale(1);
-  }
   .mobileVisible {
     display: block;
   }

@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import { getSinglePath, getAllPaths} from '../services/paths.js'
-import { Typography , Skeleton, Button} from 'antd'
+import React, {useState, useEffect} from 'react';
+import { getSinglePath, getAllPaths} from '../services/paths.js';
+import { Typography , Skeleton, Button} from 'antd';
+import styles from './PathInfo.module.css'; // Import CSS Module
 import { useContextInfo } from '../hooks/context.js'
 
 
