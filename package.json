@@ -1,35 +1,80 @@
 {
-  "name": "backend",
-  "version": "0.0.0",
+  "name": "ai-v1",
+  "version": "1.0.0",
+  "description": "AI-V1 Full Stack Application with Modern Development Tooling",
   "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "DEBUG=backend:* nodemon ./bin/www",
-    "dev-windows": "nodemon ./bin/www",
-    "audit": "npm audit"
-  },
-  "dependencies": {
-    "axios": "^1.4.0",
-    "bcrypt": "^5.1.0",
-    "body-parser": "^1.20.2",
-    "connect-flash": "^0.1.1",
-    "connect-mongo": "^5.0.0",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "dotenv": "^16.1.4",
-    "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "hbs": "^4.2.0",
-    "mercadopago": "^1.5.16",
-    "mongoose": "^7.2.2",
-    "morgan": "^1.10.0",
-    "node-sass-middleware": "^1.0.1",
-    "passport": "^0.6.0",
-    "passport-google-oauth20": "^2.0.0",
-    "passport-local-mongoose": "^8.0.0",
-    "serve-favicon": "^2.5.0"
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "start": "cd backend && npm start",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test -- --watchAll=false",
+    "test:coverage": "npm run test:coverage:backend && npm run test:coverage:frontend",
+    "test:coverage:backend": "cd backend && npm run test:coverage",
+    "test:coverage:frontend": "cd frontend && npm test -- --coverage --watchAll=false",
+    "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
+    "lint:fix": "eslint . --ext .js,.jsx --ignore-path .gitignore --fix",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "format": "prettier --write \"**/*.{js,jsx,json,css,md}\" --ignore-path .prettierignore",
+    "format:check": "prettier --check \"**/*.{js,jsx,json,css,md}\" --ignore-path .prettierignore",
+    "audit": "npm audit && cd backend && npm audit && cd ../frontend && npm audit",
+    "audit:fix": "npm audit fix && cd backend && npm audit fix && cd ../frontend && npm audit fix",
+    "clean": "npm run clean:deps && npm run clean:build",
+    "clean:deps": "rm -rf node_modules backend/node_modules frontend/node_modules",
+    "clean:build": "rm -rf backend/build frontend/build",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "setup:husky": "husky install"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "concurrently": "^9.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-react-app": "^7.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "mongoose",
+    "fullstack",
+    "javascript",
+    "modern-development"
+  ],
+  "author": "AI-V1 Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ai-v1.git"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
